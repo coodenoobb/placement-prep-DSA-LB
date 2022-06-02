@@ -5,7 +5,7 @@ void sayDigits(int n,string arr[]){
     if(n==0){
         return ;
     }
-    int dig = n%10;
+    int dig = n%10; 
     n=n/10;
     
 

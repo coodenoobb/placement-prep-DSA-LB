@@ -4,5 +4,8 @@ int main(){
     cout<<"Hello world"<<endl;
 
     cout<<"Whats your name ?"<<endl;
+    cout<<"Whats your name ?"<<endl;
+    cout<<"Whats your name ?"<<endl;
+    cout<<"Whats your name ?"<<endl;
 return 0;
 }

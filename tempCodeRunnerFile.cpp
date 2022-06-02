@@ -1,0 +1,1 @@
+sayDigits(n,arr);

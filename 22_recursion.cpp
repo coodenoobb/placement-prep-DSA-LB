@@ -1,23 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
-void printNum(int n){
-
-    if(n==0){
-        return ;
+void reachHome(int src,int des){
+    
+    cout<<"Source is "<<src<<endl;
+    //base case
+    if(src==des){
+        cout<<"reached"<<endl;
+        return;
     }
     
-    printNum(n-1);
-    cout<<n<<" ";
-
-    
-
-
+    src++;
+    //recursice call
+    reachHome(src,des);
 }
-
 int main(){
 
-    printNum(5);
-    
+    int src =1;
+    int des =10;
+
+    cout<<endl;
+    reachHome(src,des);
+
 
 return 0;
 }

@@ -1,16 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
-void print(int i, int n){
-    if(i>n){
-        return ;
+int numSum(int n){
+
+    if(n==0){
+        return 0 ;
     }
-    cout<<i<<" ";
-    return print(i+1,n);
+    return ((n)+numSum(n-1));
+
 }
+
 int main(){
     int n;
     cin>>n;
+    int ans = numSum(n);
 
-    print(1,n);
+    cout<<ans;
 return 0;
 }

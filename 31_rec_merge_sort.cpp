@@ -21,8 +21,7 @@ void merge(int arr[],int l, int h){
         second[i]=arr[mainArrayindex++];
     }
 
-    //merge 2 sorted array
-
+    //merge 2 sorted array 
     int index1 = 0;
     int index2 = 0;
     mainArrayindex = l;
@@ -55,7 +54,7 @@ void mergeSort(int arr[],int l, int h){
     mergeSort(arr,0,mid);
     //right part sort
     mergeSort(arr,mid+1,h);
-    
+
     merge(arr,l,h);
 }
 

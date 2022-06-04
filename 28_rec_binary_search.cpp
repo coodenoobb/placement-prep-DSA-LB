@@ -8,9 +8,7 @@ void printArray(int arr[], int l,int h){
 }
 
 bool binarySearch(int arr[],int l,int h, int key){
-
     printArray(arr,l,h);
-
     if(l>h){
         return false;
     }

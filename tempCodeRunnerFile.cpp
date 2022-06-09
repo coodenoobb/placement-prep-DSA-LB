@@ -1,1 +1,2 @@
-sayDigits(n,arr);
+
+    

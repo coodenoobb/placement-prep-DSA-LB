@@ -45,25 +45,48 @@ void insertAtTail(Node* &tail, int d){
     tail=temp;
     temp->next=NULL;
     }
-
     while(tail->next!=NULL){
         tail=tail->next;
     }
-    
+}
+
+void insertAtPosition( Node* &head,Node* &tail, int pos, int d){
+
+    // if postion is 1st
+    if(pos==1){
+        insertAtHead(head,d);
+        return;
+    }
+
+    Node* temp = head;
+    int count = 1;
+    while(count<pos-1){
+        temp=temp->next;
+        count++;
+    }
+
+    if(temp->next==NULL){
+        insertAtTail(tail,d);
+    }
+    // create a node for Data D
+
+    Node* noddle = new Node(d);
+    noddle->next=temp->next;
+    temp->next=noddle;
 
 }
 
 int main(){ 
 
     Node* node1 = new Node(10);
-    // Node* node2 = new Node(20);
-    // Node* node3 = new Node(30);
-    // Node* node4 = new Node(40);
+    Node* node2 = new Node(20);
+    Node* node3 = new Node(30);
+    Node* node4 = new Node(40);
 
 
-    // node1->next=node2;
-    // node2->next=node3;
-    // node3->next=node4;
+    node1->next=node2;
+    node2->next=node3;
+    node3->next=node4;
     // Node* node1 =new Node;
 
     // node1->data = 20;
@@ -72,7 +95,7 @@ int main(){
     // cout<<node1->data<<endl;
     // cout<<node1->next<<endl;
     Node* head = node1;
-    Node* tail = node1;
+    Node* tail = node4;
     printList(head);
 
     // cout<<endl;
@@ -83,11 +106,25 @@ int main(){
     // insertAtHead(head,79);
     // printList(head);
 
-    insertAtTail(tail,60);
+    // insertAtTail(tail,55);
+
+
     printList(head);
 
+    cout<<endl;
 
- 
+    // insertAtPosition(head,tail,5,22);
+    // printList(head);
+
+    cout<<head->data<<" "<<endl;
+    cout<<tail->data<<" "<<endl;
+
+
+    insertAtPosition(head,tail,5,22);
+    printList(head);
+
+       cout<<head->data<<" "<<endl;
+    cout<<tail->data<<" "<<endl;
 
 return 0;
 }
